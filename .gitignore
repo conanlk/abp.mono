@@ -251,15 +251,15 @@ paket-files/
 .idea/
 *.sln.iml
 
-# Mono
-src/Abp.Mono.Web/Logs/*
-src/Abp.Mono.Web/Logs/*
-src/Abp.Mono.AuthServer/Logs/*
-src/Abp.Mono.HttpApi.Host/Logs/*
-src/Abp.Mono.HttpApi.HostWithIds/Logs/*
-src/Abp.Mono.DbMigrator/Logs/*
-src/Abp.Mono.Blazor.Server/Logs/*
-src/Abp.Mono.Blazor.Server.Tiered/Logs/*
+# mono
+src/abp.mono.Web/Logs/*
+src/abp.mono.Web.Host/Logs/*
+src/abp.mono.AuthServer/Logs/*
+src/abp.mono.HttpApi.Host/Logs/*
+src/abp.mono.HttpApi.HostWithIds/Logs/*
+src/abp.mono.DbMigrator/Logs/*
+src/abp.mono.Blazor.Server/Logs/*
+src/abp.mono.Blazor.Server.Tiered/Logs/*
 
 # Use abp install-libs to restore.
 **/wwwroot/libs/*

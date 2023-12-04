@@ -1,4 +1,4 @@
-# Abp.Mono
+# abp.mono
 
 ## About this solution
 
@@ -8,27 +8,24 @@ This is a layered startup solution based on [Domain Driven Design (DDD)](https:/
 
 * [.NET 7.0+ SDK](https://dotnet.microsoft.com/download/dotnet)
 * [Node v18 or 20](https://nodejs.org/en)
-* [Redis](https://redis.io/)
 
 ### Configurations
 
 The solution comes with a default configuration that works out of the box. However, you may consider to change the following configuration before running your solution:
 
-* Check the `ConnectionStrings` in `appsettings.json` files under the `Abp.Mono.AuthServer`, `Abp.Mono.HttpApi.Host` and `Abp.Mono.DbMigrator` projects and change it if you need.
+* Check the `ConnectionStrings` in `appsettings.json` files under the `abp.mono.Web` and `abp.mono.DbMigrator` projects and change it if you need.
 
 ### Before running the application
 
 * Run `abp install-libs` command on your solution folder to install client-side package dependencies. This step is automatically done when you create a new solution with ABP CLI. However, you should run it yourself if you have first cloned this solution from your source control, or added a new client-side package dependency to your solution.
-* Run `Abp.Mono.DbMigrator` to create the initial database. This should be done in the first run. It is also needed if a new database migration is added to the solution later.
+* Run `abp.mono.DbMigrator` to create the initial database. This should be done in the first run. It is also needed if a new database migration is added to the solution later.
 
 ### Solution structure
 
 This is a layered monolith application that consists of the following applications:
 
-* `Abp.Mono.DbMigrator`: A console application which applies the migrations and also seeds the initial data. It is useful on development as well as on production environment.
-* `Abp.Mono.AuthServer`: ASP.NET Core MVC / Razor Pages application that is integrated OAuth 2.0(`OpenIddict`) and account modules. It is used to authenticate users and issue tokens.
-* `Abp.Mono.HttpApi.Host`: ASP.NET Core API application that is used to expose the APIs to the clients.
-* `Abp.Mono.Web`: ASP.NET Core MVC / Razor Pages application that is the essential web application of the solution.
+* `abp.mono.DbMigrator`: A console application which applies the migrations and also seeds the initial data. It is useful on development as well as on production environment.
+* `abp.mono.Web`: ASP.NET Core MVC / Razor Pages application that is the essential web application of the solution.
 
 ## Deploying the application
 
